@@ -1,0 +1,257 @@
+.codepencil {
+
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dee2e6;
+  min-width: 280px;
+  height: 280px;
+
+
+  &.fullscreen {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999999;
+    background-color: #fff;
+  }
+
+
+  // 遮罩层
+  .overlays {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  //头部
+  .header {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #dee2e6;
+    //background-color: #2c303a;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      margin: 0;
+      padding: 4px;
+
+
+
+      //选择框包裹容器
+      .checkbox-wrapper {
+        display: none;
+        align-items: center;
+        padding: 0 4px;
+
+        &.show {
+          display: flex;
+        }
+
+        //开关样式
+        .ckbx-style-8 {
+          font-size: 1em
+        }
+
+        //开关描述文本
+        .multiple-label {
+          margin-left: 10px;
+          color: rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      //按钮样式美化
+      button {
+        display: flex;
+        flex-shrink: 0;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        cursor: pointer;
+        user-select: none;
+        //background: #444857;
+        height: 30px;
+        background: transparent;
+        border: 0;
+        padding: 0 8px;
+        border-radius: 4px;
+        outline: none;
+        white-space: nowrap;
+        overflow: hidden;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out;
+
+
+        svg {
+          width: 16px;
+          height: 16px;
+          fill: #212529;
+        }
+
+        &.active {
+          color: #0d6efd;
+          background-color: #e2edff;
+        }
+
+        &:active {
+          color: #0d6efd;
+          background-color: #e2edff;
+        }
+
+      }
+
+    }
+
+
+  }
+
+  // 身体部分
+  .body {
+    flex-grow: 1;
+    display: flex;
+    overflow: auto;
+    /* 当子元素内容超出容器时显示滚动条 */
+    position: relative;
+
+    .panel {
+      border-right: 1px solid #dee2e6;
+      flex: 1;
+      /* 平分父容器的空间 */
+      min-width: 0;
+      display: none;
+      flex-direction: column;
+      background-color: #ffffff;
+
+      &.active {
+        display: flex;
+      }
+
+
+      &:last-child {
+        border-right: none;
+
+      }
+
+      .panel-header {
+        font-size: 14px;
+        padding: 8px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #dee2e6;
+        color: rgba(0, 0, 0, 0.5);
+
+
+
+        .title {
+          font-weight: bold;
+          flex-shrink: 0;
+        }
+
+        .actions {
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+
+          button {
+            background: transparent;
+            border: 0;
+            padding: 0;
+            border-radius: 0;
+            outline: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            svg {
+              width: 14px;
+              height: 14px;
+              fill: #212529;
+            }
+          }
+
+        }
+
+
+      }
+
+
+      // 面板
+      .panel-body {
+        overflow: auto;
+        flex-grow: 1;
+        position: relative;
+
+        .output-loader-wraper {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          display: none;
+          align-items: center;
+          justify-content: center;
+          background-color: #fff;
+
+          &.open {
+            display: flex;
+          }
+
+        }
+
+
+        iframe {
+          display: block;
+          height: 100%;
+          border: none;
+          width: 100%;
+        }
+
+        >div {
+          height: 100%;
+
+          .cm-editor {
+            height: 100%;
+
+            .cm-content {
+              font-family: "Consolas", sans-serif;
+              font-size: 16px;
+            }
+
+            .cm-scroller {
+              font-size: 16px;
+            }
+
+          }
+
+        }
+
+      }
+
+
+    }
+
+  }
+}

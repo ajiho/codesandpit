@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/css/codepencil.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="codepencil">
+        <!-- <div class="overlays">
+            <div style="color: #0d6efd" class="la-square-loader la-2x">
+                <div></div>
+            </div>
+        </div> -->
+        <ul class="header">
+            <li>
+                <button>
+                    HTML
+                </button>
+            </li>
+            <li>
+                <button>
+                    CSS
+                </button>
+            </li>
+            <li>
+                <button>
+                    Javascript
+                </button>
+            </li>
+            <li>
+                <button>
+                    结果
+                </button>
+            </li>
+            <li>
+                <button>
+                    控制台
+                </button>
+            </li>
+            <!--运行-->
+            <li>
+                <button>
+                    <svg viewBox="0 0 16 16">
+                        <path
+                            d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z" />
+                    </svg>
+                </button>
+            </li>
+            <!--清空控制台-->
+            <li>
+                <button>
+                    <svg viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z" />
+                    </svg>
+                </button>
+            </li>
+            <!--全屏-->
+            <li>
+                <button>
+                    <svg viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707m-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707" />
+                    </svg>
+                </button>
+            </li>
+            <!-- 单选开关 -->
+            <li>
+                <div class="multiple-wrapper">
+                    <div class="ckbx-style-8">
+                        <input type="checkbox" id="ckbx-style-8-1">
+                        <label for="ckbx-style-8-1"></label>
+                    </div>
+                    <div class="multiple-label">单选</div>
+                </div>
+            </li>
+
+            <li>
+                <div class="multiple-wrapper">
+                    <div class="ckbx-style-8">
+                        <input type="checkbox" id="ckbx-style-8-4">
+                        <label for="ckbx-style-8-4"></label>
+                    </div>
+                    <div class="multiple-label">自动运行</div>
+                </div>
+            </li>
+        </ul>
+
+        <!-- 存放各种面板的地方 -->
+        <div class="body">
+
+
+            <div class="panel">
+                <div class="panel-header">
+                    <div class="title">html</div>
+                    <div class="actions">
+
+                        <button type="button">
+                            <svg viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <textarea class="editor" name="" id="htmlEditor" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">
+                    <div class="title">css</div>
+                    <div class="actions">
+                        <button type="button">
+                            <svg viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <textarea class="editor" name="" id="cssEditor" cols="30" rows="10"></textarea>
+                </div>
+
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">
+                    <div class="title">javascript</div>
+                    <div class="actions">
+
+                        <button type="button">
+                            <svg viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <textarea class="editor" name="" id="jsEditor" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">
+                    <div class="title">输出</div>
+                    <div class="actions">
+
+                        <button type="button">
+                            <svg viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="panel-body">
+
+                    <div class="output-loader-wraper">
+                        <div style="color: #a0cadb" class="la-ball-clip-rotate-pulse">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <iframe></iframe>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">
+                    <div class="title">控制台</div>
+                    <div class="actions">
+
+                        <button type="button">
+                            <svg viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <textarea class="editor" name="" id="consoleEditor" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="jquery.min.js"></script>
+
+    <script>
+
+
+        /**
+         * 防抖函数,可以防止js高频率渲染页面时出现的视觉卡顿效果
+         * 简单理解就是，高频率的事件中，执行耗费性能的操作，连续操作之后只有最后一次会生效
+         * @param func 函数
+         * @param wait 频率
+         * @returns {(function(): void)|*}
+         */
+        const debounce = (func, wait = 500) => {
+            let timeout
+
+            return function () {
+                const context = this
+                const args = arguments
+
+                clearTimeout(timeout)
+                timeout = setTimeout(function () {
+                    func.apply(context, args)
+                }, wait)
+            }
+        }
+
+
+        $(function () {
+
+            //给一点测试默认值
+            $('#htmlEditor').val(`<button type="button" class="btn btn-danger">Danger</button>`)
+            $('#jsEditor').val(`        document.querySelector('button').addEventListener('click', function () {
+            console.log('w');
+        })`)
+
+
+            window.addEventListener('message', function (event) {
+                const data = event.data
+
+                if (data.from === "codeRunner") {
+
+                    $('#consoleEditor').val(data.args.join())
+                }
+            }, false);
+
+
+
+            const iframe = document.querySelector('iframe');
+
+            iframe.onload = () => {
+                document.querySelector('.output-loader-wraper').classList.remove('open')
+            }
+
+            const documentWrite = debounce(() => {
+                const target = iframe.contentDocument
+
+
+                const iframeContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="bootstrap.min.css">
+<title>Document<\/title>
+<style>
+${$('#cssEditor').val()}
+<\/style>
+</head>
+<body>
+
+${$('#htmlEditor').val()}
+<script src="jquery.min.js"><\/script>
+<script>
+
+
+
+
+
+    function rewriteConsole(type) {
+  const origin = console[type];
+  console[type] = (...args) => {
+    window.parent.postMessage({ from: 'codeRunner', type, args }, '*');
+    origin.apply(console, args);
+  };
+}
+
+rewriteConsole('log');
+rewriteConsole('info');
+rewriteConsole('debug');
+rewriteConsole('warn');
+rewriteConsole('error');
+rewriteConsole('table');
+
+
+(function(){ 
+window.console = new Proxy(console, {
+  get(target, prop) {
+      if (prop === "log" || prop === "error" || prop === "warn") {
+          return (...args) => {
+              const message = args.join(" ");
+              window.parent.postMessage({ typ: "console", prop, message }, "*");
+              target[prop](...args);
+          };
+      }
+      return target[prop];
+  },
+});
+})()
+
+
+<\/script>
+<\/body>
+<\/html>`;
+
+
+                target.open();
+                target.write(iframeContent);
+                target.close();
+            })
+
+
+
+            $(document).on('input', 'textarea', function () {
+
+                //开启遮罩
+                document.querySelector('.output-loader-wraper').classList.add('open')
+
+                //写入内容
+                documentWrite();
+
+
+            })
+        })
+    </script>
+
+</body>
+
+</html>
