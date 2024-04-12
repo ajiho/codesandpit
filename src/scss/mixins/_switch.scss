@@ -1,0 +1,43 @@
+@mixin switch {
+  .switch {
+    /* 宽度 */
+    --widht: 2em;
+    --height: 1em;
+
+    position: relative;
+    width: var(--widht);
+    height: var(--height);
+    margin: 0;
+    margin-right: 3px;
+    appearance: none;
+
+    &::before {
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      content: '';
+      background-color: #808080;
+      border-radius: 50em;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: var(--height);
+      height: var(--height);
+      content: '';
+      background-color: #fff;
+      border-radius: 50em;
+      transition: 0.2s linear;
+    }
+
+    &:checked::before {
+      background-color: #05c46b;
+    }
+
+    &:checked::after {
+      left: calc(var(--widht) - var(--height));
+    }
+  }
+}

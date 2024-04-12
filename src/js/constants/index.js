@@ -1,13 +1,13 @@
 import HTML from './html'
 import ICONS from './icons'
-
+import CLASS from './class'
+import KEY from './key'
 
 export default {
-    HTML,
-    ICONS
+  HTML,
+  ICONS,
+  CLASS,
+  KEY,
 }
 
-export {
-    HTML,
-    ICONS
-}
+export { HTML, ICONS, CLASS, KEY }

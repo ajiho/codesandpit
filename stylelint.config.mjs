@@ -10,6 +10,14 @@ export default {
     // always(必须加上引号)|never(不能带引号) 
     'function-url-quotes': 'always',
     // 操作符后面允许空行,否则会和prettier产生冲突 https://www.npmjs.com/package/stylelint-config-standard-scss
-    'scss/operator-no-newline-after': null
+    'scss/operator-no-newline-after': null,
+    // 关闭无效导入验证
+    'no-invalid-position-at-import-rule': null,
+    // 'no-invalid-position-at-import-rule': [
+    //   true,
+    //   {
+    //     ignoreAtRules: ["/^overlayscrollbars/"]
+    //   }
+    // ]
   },
 }

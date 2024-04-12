@@ -1,0 +1,15 @@
+// 对codemirror默认样式的美化
+@mixin codemirror {
+  .cm-editor {
+    height: 100%;
+
+    .cm-content {
+      font-family: Consolas, sans-serif;
+      font-size: 16px;
+    }
+
+    .cm-scroller {
+      font-size: 16px;
+    }
+  }
+}

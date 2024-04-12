@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/css/codepencil.css">
+    <title>基本的模板设计</title>
+</head>
+
+<body>
+    <div class="codepencil">
+        <!-- <div class="overlays">
+            <div class="loader"></div>
+        </div> -->
+        <ul class="header">
+            <li>
+                <button>
+                    HTML
+                </button>
+            </li>
+            <li>
+                <button>
+                    CSS
+                </button>
+            </li>
+            <li>
+                <button>
+                    Javascript
+                </button>
+            </li>
+            <li>
+                <button>
+                    结果
+                </button>
+            </li>
+            <li>
+                <button>
+                    控制台
+                </button>
+            </li>
+            <!--运行-->
+            <li>
+                <button>
+                    <svg viewBox="0 0 16 16">
+                        <path
+                            d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z" />
+                    </svg>
+                </button>
+            </li>
+            <!--清空控制台-->
+            <li>
+                <button>
+                    <svg viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z" />
+                    </svg>
+                </button>
+            </li>
+            <!--全屏-->
+            <li>
+                <button>
+                    <svg viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707m-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707" />
+                    </svg>
+                </button>
+            </li>
+            <!-- 单选开关 -->
+            <li>
+                <label for="multiple">
+                    <input type="checkbox" class="switch" id="multiple"> 多选面板
+                </label>
+            </li>
+
+            <li>
+                <label for="auto">
+                    <input type="checkbox" class="switch" id="auto"> 自动运行
+                </label>
+            </li>
+        </ul>
+
+        <!-- 存放各种面板的地方 -->
+        <div class="body">
+
+
+            <div class="panel  active">
+
+                <div class="panel-header">
+                    <div class="title">html</div>
+                    <div class="actions">
+
+                        <button type="button">
+                            <svg viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <textarea class="editor" name="" id="htmlEditor" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+
+            <div class="panel  active">
+                <div class="panel-header">
+                    <div class="title">css</div>
+                    <div class="actions">
+                        <button type="button">
+                            <svg viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <textarea class="editor" name="" id="cssEditor" cols="30" rows="10"></textarea>
+                </div>
+
+            </div>
+
+            <div class="panel active">
+                <div class="panel-header">
+                    <div class="title">javascript</div>
+                    <div class="actions">
+
+                        <button type="button">
+                            <svg viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <textarea class="editor" name="" id="jsEditor" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+
+            <div class="panel active">
+                <div class="panel-header">
+                    <div class="title">输出</div>
+                    <div class="actions">
+
+                        <button type="button">
+                            <svg viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="overlays">
+                        <div class="loader"></div>
+                    </div>
+                    <iframe></iframe>
+                </div>
+            </div>
+
+            <div class="panel active">
+                <div class="panel-header">
+                    <div class="title">控制台</div>
+                    <div class="actions">
+
+                        <button type="button">
+                            <svg viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <textarea class="editor" name="" id="consoleEditor" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/css/codesandpit.css">
+    <title>测试demo</title>
+</head>
+
+<body>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <div id="demo">demo</div>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <h1>dsadad</h1>
+    <script src="/dist/js/codesandpit.js"></script>
+    <script>
+        new Codesandpit(document.querySelector('#demo'), {
+            height: '400px',
+            resultButtonText: '结果a',
+            //外部css和js的路径
+            paths: {
+                css: [
+                    'bootstrap.min.css'
+                ],
+                js: [
+                    'jquery.min.js'
+                ]
+            },
+            //多选
+            multipleChoiceChecked: true,
+            //初始化后立马运行
+            runAway: true,
+            //自动运行
+            autoRunChecked: true,
+            //html css js result console 其中之一
+            // active: ['html', 'css', 'js', 'result', 'console'],
+            active: ['html', 'result'],
+            //断点视口
+            breakpoint: 1200,
+            //html字符串
+            html: `<button type="button" class="btn btn-primary">Primary</button>`,
+            //css样式
+            css: '',
+            //js代码
+            js: `$(document).on('click','button',function(){
+    console.log('button clicked!');
+})`,
+        });
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

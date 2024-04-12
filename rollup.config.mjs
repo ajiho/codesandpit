@@ -3,8 +3,6 @@ import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 import babel from '@rollup/plugin-babel';
 import stripBanner from 'rollup-plugin-strip-banner';
-
-
 import getBanner from "./build/banner.mjs"
 import pkg from "./build/get-package-info.mjs"
 
@@ -38,7 +36,7 @@ if (process.env.NODE_ENV === 'production') {
 const config = [];
 
 
-let file = 'dist/js/codepencil.js'
+let file = pkg.main
 if (process.env.NODE_ENV === 'production') {
     file = file.replace(/\.js$/, '.min.js')
 }
@@ -49,14 +47,14 @@ const base = {
     sourcemap: true,//方便调试
 }
 
-const input = 'src/js/codepencil.js'
+const input = 'src/js/index.js'
 
 config.push({
     input,
     output: {
         ...base,
         format: 'umd',
-        name: 'Codepencil',
+        name: 'Codesandpit',
         file
     },
     plugins

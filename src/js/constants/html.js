@@ -1,3 +1,6 @@
+import icons from './icons'
+import key from './key'
+
 export default {
   // 容器
   container: [`<div class="codepencil">`, '</div>'],
@@ -5,45 +8,27 @@ export default {
   header: [`<ul class="header">`, `</ul>`],
   //头部按钮
   headerItem: `<li>%s</li>`,
+
   //头部的按钮
-  headerItemWithPanelButton: `<button data-id="%s" class="%s">%s</button>`,
-  headerItemButton: `<button class="%s">%s</button>`,
+  headerItemButton: `<button %s class="%s">%s</button>`,
 
-  //选择框容器
-  checkboxWrapper: `<div class="checkbox-wrapper %s">%s</div>`,
-
-  //多选开关
-  multipleCheckbox: `<div class="ckbx-style-8">
-  <input type="checkbox" id="ckbx-style-8-1" %s>
-  <label for="ckbx-style-8-1"></label>
-</div>
-<div class="multiple-label">单选</div>`,
-
-  //自动运行的复选框
-  autoRunCheckbox: `<div class="ckbx-style-8">
-  <input type="checkbox" id="ckbx-style-8-4" %s>
-  <label for="ckbx-style-8-4"></label>
-</div>
-<div class="multiple-label">自动运行</div>`,
+  //头部的开关
+  headerItemswitch: `<label for="%s"><input  type="checkbox" class="switch" id="%s" %s>%s</label>`,
 
   //身体结构
   body: [`<div class="body">`, `</div>`],
 
   //面板
-  panel: `<div class="panel %s" data-id="%s">
+  panel: `<div class="panel %s" ${key.attribute.dataId}="%s">
   <div class="panel-header">
       <div class="title">%s</div>
       <div class="actions">
           <button type="button" class="%s-clear-btn">
-              <svg viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                  <path
-                      d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z" />
-              </svg>
+          ${icons.clear}
           </button>
       </div>
   </div>
-  <div class="panel-body" id="%s">
+  <div class="panel-body">
   %s
   </div>
 </div>`,
@@ -94,12 +79,7 @@ export default {
 </script>
 </body>
 </html>`,
-  resultOverlays: `<div class="output-loader-wraper">
-  <div style="color: #a0cadb" class="la-ball-clip-rotate-pulse">
-      <div></div>
-      <div></div>
-  </div>
-</div>`
 
-
+  // 遮罩层
+  overlays: `<div class="overlays"><div class="loader"></div></div>`,
 }

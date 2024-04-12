@@ -4,3 +4,7 @@ node_modules
 **/.cache/
 .temp
 **/.temp/
+dist
+
+**/cache
+**/dist

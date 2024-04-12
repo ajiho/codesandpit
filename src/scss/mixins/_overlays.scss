@@ -1,0 +1,16 @@
+@mixin overlays {
+  // 遮罩层
+  .overlays {
+    position: absolute;
+    inset: 0;
+    z-index: 40;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+
+    &.show {
+      display: flex;
+    }
+  }
+}
