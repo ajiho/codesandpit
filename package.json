@@ -1,6 +1,6 @@
 {
   "name": "codesandpit",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "description": "A plugin written in vanilla JavaScript that can demonstrate, edit, and run HTML, CSS, and JavaScript code snippets",
   "main": "dist/js/codesandpit.js",
   "module": "dist/js/codesandpit.esm.js",
